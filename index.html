@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur d&#x27;Écosystèmes Urbains Durables | Imaginez votre quartier de demain</title>
+    <meta name="description" content="Modélisez l">
+    <style>
+        :root {
+            --color-primary: #3a7d44;
+            --color-secondary: #a3cc9e;
+            --color-accent: #d3f3ee;
+            --color-background: #f0f8f0;
+            --color-text: #2c3e50;
+            --color-light-text: #4a6572;
+            --font-family-sans: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            --glass-background: rgba(255, 255, 255, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --glass-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: var(--font-family-sans);
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-background);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: var(--color-primary);
+            text-align: center;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: var(--color-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex-grow: 1;
+        }
+
+        .intro, .tool-section, .benefits, .headlines-section, .seo-section {
+            background: var(--glass-background);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--glass-shadow);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--color-light-text);
+        }
+
+        .intro p:first-of-type {
+            font-size: 1.15rem;
+            font-weight: 300;
+        }
+
+        .tool-section form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-section label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--color-text);
+            font-size: 0.95rem;
+        }
+
+        .tool-section input[type="number"],
+        .tool-section select {
+            width: calc(100% - 20px);
+            padding: 12px;
+            border: 1px solid var(--color-secondary);
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+            font-size: 1rem;
+            color: var(--color-text);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .tool-section input[type="number"]:focus,
+        .tool-section select:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(58, 125, 68, 0.2);
+            outline: none;
+        }
+
+        button {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 1.5rem;
+            display: block;
+            width: fit-content;
+            justify-self: start;
+            grid-column: 1 / -1;
+        }
+
+        button:hover {
+            background-color: #2e6236;
+            transform: translateY(-2px);
+        }
+
+        .tool-result {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--color-accent);
+            border-radius: 8px;
+            border: 1px solid rgba(58, 125, 68, 0.2);
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.8;
+        }
+        .tool-result strong {
+            color: var(--color-text);
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits li {
+            background: linear-gradient(to right, var(--color-accent) 0%, rgba(255,255,255,0) 100%);
+            padding: 0.8rem 1.2rem;
+            margin-bottom: 0.8rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            color: var(--color-light-text);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .benefits li::before {
+            content: '✓';
+            color: var(--color-primary);
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .headlines-section {
+            background: var(--glass-background);
+        }
+        .headlines-section h3 {
+            border-bottom: 2px solid var(--color-secondary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+        .headlines-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        .headlines-section li {
+            background-color: var(--color-background);
+            border-left: 4px solid var(--color-primary);
+            padding: 0.8rem 1.2rem;
+            margin-bottom: 0.7rem;
+            border-radius: 4px;
+            color: var(--color-light-text);
+            font-style: italic;
+        }
+        .headlines-section li strong {
+            color: var(--color-text);
+            font-style: normal;
+        }
+
+        .seo-section {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--color-light-text);
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .seo-section p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        footer {
+            background-color: var(--color-primary);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            h3 {
+                font-size: 1.4rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+            .intro, .tool-section, .benefits, .headlines-section, .seo-section {
+                padding: 1.5rem;
+            }
+            button {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .tool-section form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://simulateur-d-ecosystemes-urbains-durables-3.onrender.com">
+    <meta property="og:title" content="Simulateur d&#x27;Écosystèmes Urbains Durables">
+    <meta property="og:description" content="Modélisez l">
+    <meta property="og:url" content="https://simulateur-d-ecosystemes-urbains-durables-3.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Simulateur d'Écosystèmes Urbains Durables", "description": "Modélisez l", "url": "https://simulateur-d-ecosystemes-urbains-durables-3.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="simulateur-d-ecosystemes-urbains-durables-3" data-runtime-mode="generic_calculator">
+    <header>
+        <div class="container">
+            <h1>Simulateur d'Écosystèmes Urbains Durables</h1>
+            <p>Modélisez l'impact des initiatives écologiques sur la vitalité de nos quartiers.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <h2>Imaginez votre quartier de demain</h2>
+            <p>En tant qu'urbaniste, architecte, décideur local ou citoyen engagé, vous savez que chaque décision compte pour bâtir un environnement urbain plus résilient. Notre simulateur vous permet de visualiser concrètement les retombées positives de vos projets de développement durable.</p>
+            <p>Découvrez comment des choix simples peuvent transformer la qualité de vie, la biodiversité et l'empreinte écologique de nos espaces de vie.</p>
+        </section>
+
+        <section class="tool-section">
+            <h2>Calculez l'impact de vos initiatives</h2>
+            <form id="tool-form">
+                <div>
+                    <label for="surface_espaces_verts">Surface d'espaces verts supplémentaires (m²):</label>
+                    <input type="number" id="surface_espaces_verts" value="5000" min="0" required>
+                </div>
+                <div>
+                    <label for="taux_permeabilisation">Augmentation du taux de perméabilisation des sols (%):</label>
+                    <input type="number" id="taux_permeabilisation" value="10" min="0" max="100" required>
+                </div>
+                <div>
+                    <label for="energie_renouvelable">Part d'énergie renouvelable supplémentaire (pourcentage de la consommation locale):</label>
+                    <input type="number" id="energie_renouvelable" value="20" min="0" max="100" required>
+                </div>
+                <div>
+                    <label for="nombre_arbres">Nombre d'arbres plantés en plus:</label>
+                    <input type="number" id="nombre_arbres" value="200" min="0" required>
+                </div>
+                <div>
+                    <label for="distance_transport_doux">Développement de pistes cyclables/voies piétonnes (km):</label>
+                    <input type="number" id="distance_transport_doux" value="5" min="0" required>
+                </div>
+                <div>
+                    <label for="gestion_eau_pluie">Type de gestion des eaux de pluie:</label>
+                    <select id="gestion_eau_pluie" required>
+                        <option value="aucune">Aucune amélioration</option>
+                        <option value="legere">Amélioration légère (bassins de rétention)</option>
+                        <option value="moderee">Amélioration modérée (noues, jardins de pluie)</option>
+                        <option value="optimale">Gestion optimale (infiltration totale, toitures végétalisées)</option>
+                    </select>
+                </div>
+                <button type="submit" id="tool-submit" data-affiliate-slot="calculate-impact">Simuler l'impact</button>
+            </form>
+            <div id="tool-result" class="tool-result" style="display: none;"></div>
+        </section>
+
+        <section class="benefits">
+            <h2>Les bénéfices tangibles pour tous</h2>
+            <p>Chaque initiative en faveur de l'environnement génère une multitude d'avantages pour les habitants et le territoire. Voici quelques-uns des impacts positifs que notre simulateur modélise :</p>
+            <ul>
+                <li>Amélioration de la qualité de l'air et réduction des îlots de chaleur urbains.</li>
+                <li>Augmentation de la biodiversité locale et création d'écosystèmes résilients.</li>
+                <li>Réduction de la consommation d'énergie et diminution des émissions de gaz à effet de serre.</li>
+                <li>Meilleure gestion des eaux pluviales et prévention des inondations.</li>
+                <li>Renforcement du lien social et amélioration du bien-être des résidents.</li>
+                <li>Valorisation du patrimoine urbain et attractivité du quartier.</li>
+            </ul>
+        </section>
+
+        <section class="headlines-section">
+            <h2>Idées de titres pour vos rapports</h2>
+            <p>Chaque projet mérite d'être mis en valeur. Voici quelques suggestions de titres, adaptés à différents contextes, pour présenter les conclusions de vos simulations et inspirer l'action :</p>
+
+            <h3>Titre axé SEO</h3>
+            <ul>
+                <li><strong>Impact Écologique Quartier :</strong> Calculateur Biodiversité & Climat Urbain</li>
+                <li><strong>Urbanisme Durable :</strong> Modélisation Bénéfices Environnementaux France</li>
+                <li><strong>Simulation Aménagement Vert :</strong> Qualité de Vie & Énergie Renouvelable</li>
+            </ul>
+
+            <h3>Titre accrocheur (Clickbait)</h3>
+            <ul>
+                <li><strong>Révolution Urbaine :</strong> Comment CE quartier va changer (et le vôtre aussi) !</li>
+                <li><strong>Secret Révélé :</strong> Les chiffres qui prouvent que votre ville peut respirer !</li>
+                <li><strong>Découvrez :</strong> La formule magique pour un quartier 100% vert !</li>
+            </ul>
+
+            <h3>Titre expert</h3>
+            <ul>
+                <li><strong>Prospective Écosystémique Urbaine :</strong> Méthodologie d'évaluation des externalités positives des aménagements verts.</li>
+                <li><strong>Analyse Multi-Critères :</strong> Quantification des services écosystémiques rendus par les infrastructures vertes en milieu dense.</li>
+                <li><strong>Optimisation Territoriale :</strong> Modélisation de l'efficience énergétique et hydrologique des solutions basées sur la nature.</li>
+            </ul>
+
+            <h3>Titre doux et inspirant</h3>
+            <ul>
+                <li><strong>Un Souffle Nouveau pour nos Villes :</strong> Cultiver la vie en milieu urbain.</li>
+                <li><strong>Construire Demain, Ensemble :</strong> L'harmonie entre l'humain et la nature.</li>
+                <li><strong>Éveiller les Quartiers :</strong> Vers un avenir où il fait bon vivre.</li>
+            </ul>
+
+            <h3>Titre commercial</h3>
+            <ul>
+                <li><strong>Solution d'Aide à la Décision :</strong> Maximisez le retour sur investissement environnemental.</li>
+                <li><strong>Performance Urbaine Éco-responsable :</strong> Votre outil pour une planification innovante.</li>
+                <li><strong>Valorisez vos Projets :</strong> Preuves quantifiables de l'engagement durable de votre collectivité.</li>
+            </ul>
+        </section>
+    </div>
+
+    <section class="seo-section">
+        <p>Recherchez-vous des solutions pour l'<strong>urbanisme durable</strong> en France ? Notre simulateur est l'outil idéal pour les professionnels et les collectivités souhaitant évaluer l'<strong>impact écologique des projets urbains</strong>. Que ce soit pour la <strong>qualité de l'air en ville</strong>, la <strong>biodiversité urbaine</strong>, la <strong>gestion de l'eau</strong> ou l'<strong>énergie renouvelable en quartier</strong>, notre plateforme offre une <strong>modélisation environnementale</strong> précise. Optimisez vos plans d'<strong>aménagement vert</strong> et visualisez les <strong>bénéfices environnementaux</strong> pour un <strong>quartier écologique</strong> et résilient. Idéal pour architectes, paysagistes et municipalités engagées dans la <strong>transition écologique urbaine</strong>.</p>
+        <p>Découvrez comment <strong>verdir votre ville</strong> et améliorer le <strong>bien-être des citoyens</strong> grâce à des initiatives concrètes. Utilisez notre <strong>calculateur d'impact environnemental</strong> pour des décisions éclairées en matière de <strong>développement urbain durable</strong> et de <strong>résilience climatique</strong>.</p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Simulateur d'Écosystèmes Urbains Durables. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('tool-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const surfaceEspacesVerts = parseFloat(document.getElementById('surface_espaces_verts').value);
+            const tauxPermeabilisation = parseFloat(document.getElementById('taux_permeabilisation').value);
+            const energieRenouvelable = parseFloat(document.getElementById('energie_renouvelable').value);
+            const nombreArbres = parseFloat(document.getElementById('nombre_arbres').value);
+            const distanceTransportDoux = parseFloat(document.getElementById('distance_transport_doux').value);
+            const gestionEauPluie = document.getElementById('gestion_eau_pluie').value;
+
+            // Base values for a "fictional average quartier" for calculation context
+            const baseAirQualityImprovementPerSqM = 0.005; // microgram/m3 PM2.5 per m2 green space
+            const baseBiodiversityIncreasePerTree = 0.1; // species index points per tree
+            const baseCarbonReductionPerRenewablePercent = 0.5; // tons CO2 per % renewable
+            const baseWaterRetentionPerPermeablePercent = 100; // liters per % permeabilization per 1000m2
+            const baseSocialWellbeingPerKmSoftTransport = 0.02; // arbitrary index point
+
+            let airQualityImpact = surfaceEspacesVerts * baseAirQualityImprovementPerSqM;
+            let biodiversityImpact = nombreArbres * baseBiodiversityIncreasePerTree;
+            let carbonImpact = energieRenouvelable * baseCarbonReductionPerRenewablePercent;
+            let waterRetentionImpact = (tauxPermeabilisation / 100) * baseWaterRetentionPerPermeablePercent * (surfaceEspacesVerts / 1000);
+            let socialWellbeingImpact = distanceTransportDoux * baseSocialWellbeingPerKmSoftTransport;
+
+            switch (gestionEauPluie) {
+                case 'legere':
+                    waterRetentionImpact *= 1.2;
+                    break;
+                case 'moderee':
+                    waterRetentionImpact *= 1.8;
+                    break;
+                case 'optimale':
+                    waterRetentionImpact *= 2.5;
+                    break;
+            }
+
+            const resultDiv = document.getElementById('tool-result');
+            resultDiv.innerHTML = `
+                <h3>Résultats de la Simulation :</h3>
+                <p><strong>Qualité de l'air :</strong> Amélioration estimée de <strong>${airQualityImpact.toFixed(2)} µg/m³</strong> de particules fines (PM2.5) dans l'air.</p>
+                <p><strong>Biodiversité :</strong> Augmentation d'environ <strong>${biodiversityImpact.toFixed(1)}</strong> points sur l'indice de biodiversité locale (équivalent à de nouvelles espèces ou un enrichissement des existantes).</p>
+                <p><strong>Émissions de CO2 :</strong> Réduction annuelle estimée de <strong>${carbonImpact.toFixed(0)} tonnes de CO2</strong> grâce aux énergies renouvelables.</p>
+                <p><strong>Gestion de l'eau :</strong> Capacité de rétention des eaux pluviales augmentée d'environ <strong>${waterRetentionImpact.toFixed(0)} litres</strong> par événement pluvieux important.</p>
+                <p><strong>Bien-être social :</strong> Indice de bien-être et de mobilité douce amélioré de <strong>${socialWellbeingImpact.toFixed(2)}</strong> points.</p>
+                <p>Ces chiffres sont des estimations basées sur des modèles simplifiés et ont une valeur indicative.</p>
+            `;
+            resultDiv.style.display = 'block';
+        });
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.removeAttribute("rel");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  let qaFinished = false;
+  let qaWatchdog = null;
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function primaryAction(form) {
+    if (!form) return null;
+    return (
+      document.getElementById("tool-submit") ||
+      form.querySelector("#tool-submit") ||
+      form.querySelector("[data-primary-action]") ||
+      form.querySelector("button[type=submit]") ||
+      form.querySelector("button") ||
+      form.querySelector("input[type=submit]")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (type === "hidden" || type === "submit" || type === "button" || type === "reset" || type === "image" || type === "file") {
+      return;
+    }
+    const currentValue = normalize(field.value);
+    if (tag === "select") {
+      if (currentValue) return;
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      if (currentValue) return;
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      if (currentValue) return;
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      if (currentValue) return;
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      if (currentValue) return;
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      if (currentValue) return;
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      if (currentValue) return;
+      field.value = sampleNumber(field);
+      return;
+    }
+    if (currentValue) return;
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    if (qaFinished) return;
+    qaFinished = true;
+    if (qaWatchdog) {
+      window.clearTimeout(qaWatchdog);
+      qaWatchdog = null;
+    }
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+    window.setTimeout(function () {
+      try {
+        window.stop();
+      } catch (_error) {}
+    }, 0);
+  }
+
+  function installModalGuards() {
+    const noop = function () {};
+    const approve = function () { return true; };
+    const empty = function () { return ""; };
+    try { window.alert = noop; } catch (_error) {}
+    try { window.confirm = approve; } catch (_error) {}
+    try { window.prompt = empty; } catch (_error) {}
+  }
+
+  function triggerAction(form, action) {
+    try {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit(action || undefined);
+        return;
+      }
+    } catch (_error) {}
+    if (action && typeof action.click === "function") {
+      action.click();
+      return;
+    }
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "La zone de resultat est introuvable.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Le formulaire natif a mis a jour la zone de resultat.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "La zone de resultat n'a pas renvoye de contenu exploitable.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    qaWatchdog = window.setTimeout(function () {
+      stamp("fail", "QA smoke timed out before the page reported a usable result.", "");
+    }, 7000);
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Le formulaire principal est introuvable.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    installModalGuards();
+    try {
+      form.querySelectorAll("input, select, textarea").forEach(applySample);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke sample failed: ${error.message}` : "QA smoke sample failed before submit.", "");
+      return;
+    }
+    const action = primaryAction(form);
+    try {
+      triggerAction(form, action);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke submit failed: ${error.message}` : "QA smoke submit failed.", "");
+      return;
+    }
+    inspectResult(before, 10);
+  }
+
+  window.addEventListener("error", function (event) {
+    const message = event && event.message ? event.message : "JavaScript runtime error during QA smoke.";
+    stamp("fail", `QA smoke JS error: ${message}`, "");
+  }, { once: true });
+
+  window.addEventListener("unhandledrejection", function (event) {
+    const reason = event && event.reason;
+    const detail = typeof reason === "string"
+      ? reason
+      : reason && reason.message
+        ? reason.message
+        : "Unhandled promise rejection during QA smoke.";
+    stamp("fail", `QA smoke rejection: ${detail}`, "");
+  }, { once: true });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
