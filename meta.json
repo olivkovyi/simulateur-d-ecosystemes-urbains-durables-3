@@ -1,0 +1,44 @@
+{
+  "name": "Simulateur d'Écosystèmes Urbains Durables",
+  "description": "Modélisez l",
+  "theme": "calculator",
+  "design_theme": "solarpunk-signal",
+  "structure_preset": "metric-grid",
+  "render_direction": "atlas-report",
+  "page_blueprint": "worksheet-cascade",
+  "language": "fr",
+  "country": "FR",
+  "url": null,
+  "expected_url": "https://simulateur-d-ecosystemes-urbains-durables-3.onrender.com",
+  "created": "2026-05-18T00:01:34.916609+00:00",
+  "owner_user_id": "user-1774822953462",
+  "owner_username": "admin",
+  "owner_display_name": "Administrator",
+  "status": "generated",
+  "run_id": "run-1779062335699",
+  "external_site_request_id": null,
+  "external_client_ref": null,
+  "external_source_label": null,
+  "source_type": "generated",
+  "publish_target": "render",
+  "mode": "production",
+  "github": {
+    "status": "pending"
+  },
+  "deployment": {
+    "status": "pending"
+  },
+  "qa": {
+    "status": "pending"
+  },
+  "features": [
+    "Hero pattern: command",
+    "Proof module: metrics",
+    "Design theme: Solarpunk Signal",
+    "Render direction: Atlas Report",
+    "Page blueprint: Worksheet Cascade",
+    "Runtime mode: generic_calculator",
+    "Generation mode: direct_html",
+    "Artifact rendered, awaiting QA and deployment"
+  ]
+}
