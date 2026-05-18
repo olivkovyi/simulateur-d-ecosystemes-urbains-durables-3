@@ -1,0 +1,305 @@
+{
+  "run_id": "run-1779062335699",
+  "job_index": 3,
+  "params": {
+    "owner_user_id": "user-1774822953462",
+    "owner_username": "admin",
+    "owner_display_name": "Administrator",
+    "count": 3,
+    "archetype": "calculator",
+    "market": "France",
+    "language": "fr",
+    "country": "FR",
+    "brief": "Visualisez les bénéfices quantifiables des projets d'urbanisme durable : qualité de l'air, biodiversité, cons…",
+    "notes": "Modélisez l'impact d'initiatives écologiques (espaces verts, gestion de l'eau, énergie renouvelable) sur un quartier fictif en France.\nDestiné aux urbanistes, aux architectes, aux décideurs locaux et aux citoyens engagés dans la transition écologique.",
+    "import_notes": "",
+    "growth_job_id": "",
+    "growth_slug": "",
+    "growth_kind": "",
+    "external_site_request_id": "",
+    "external_client_ref": "",
+    "external_source_label": "",
+    "dashboard_mode": "builder",
+    "network_site_format": "forum",
+    "network_primary_topic": "",
+    "network_primary_geo": "",
+    "network_domain_pool": "forum-de-jeu.shop",
+    "network_hosting_pool": "4vps:netoper | server_id=447345 | ip=5.253.59.18 | ssh_user=root | ssh_port=22",
+    "network_dns_strategy": "auto_pool_assign",
+    "network_domain_flow": "manual",
+    "network_content_strategy": "",
+    "network_model_concept": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_seo": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_build": "google/gemini-2.5-flash",
+    "network_model_qa": "anthropic/claude-haiku-4.5",
+    "network_model_growth": "google/gemini-2.5-flash-lite:nitro",
+    "network_blueprint_id": "",
+    "mode": "production",
+    "run_kind": "generated_batch",
+    "publish_target": "render",
+    "requested_publish_target": "render",
+    "allow_url_fallback": false,
+    "railway_project_id_override": "",
+    "railway_environment_id_override": "",
+    "railway_service_id_override": "",
+    "railway_service_name_override": "",
+    "github_repo_private": true,
+    "stage_models": {
+      "ideation": "google/gemini-2.5-flash-lite:nitro",
+      "spec": "google/gemini-2.5-flash",
+      "copy": "google/gemini-2.5-flash-lite:nitro",
+      "qa": "anthropic/claude-haiku-4.5",
+      "escalation": "anthropic/claude-sonnet-4.6"
+    },
+    "archetype_display": "mixed batch",
+    "archetype_mix": [
+      "generator",
+      "tool",
+      "calculator"
+    ],
+    "forced_design_theme": "solarpunk-signal",
+    "forced_structure_preset": "metric-grid",
+    "site_idea_title": "Simulateur d'Écosystèmes Urbains Durables",
+    "site_idea_summary": "Modélisez l'impact d'initiatives écologiques (espaces verts, gestion de l'eau, énergie renouvelable) sur un quartier fictif en France."
+  },
+  "site_spec": {
+    "slug": "simulateur-d-ecosystemes-urbains-durables-3",
+    "theme": {
+      "name": "Solarpunk Signal",
+      "slug": "solarpunk-signal",
+      "eyebrow": "Bright Optimism",
+      "family": "solarpunk-signal",
+      "moods": [
+        "optimistic",
+        "green",
+        "smart",
+        "uplifting"
+      ],
+      "archetypes": [
+        "tool",
+        "calculator",
+        "generator"
+      ],
+      "niches": [
+        "eco tools",
+        "mobility",
+        "energy",
+        "wellness",
+        "consumer utility"
+      ],
+      "keywords": [
+        "solar",
+        "green",
+        "future",
+        "optimism",
+        "energy"
+      ],
+      "token_index": [
+        "bright",
+        "calculator",
+        "consumer",
+        "eco",
+        "energy",
+        "future",
+        "generator",
+        "green",
+        "mobility",
+        "optimism",
+        "optimistic",
+        "signal",
+        "smart",
+        "solar",
+        "solarpunk",
+        "tool",
+        "tools",
+        "uplifting",
+        "utility",
+        "wellness"
+      ],
+      "font_embed": "https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap",
+      "display_font": "\"Sora\", sans-serif",
+      "body_font": "\"Inter\", sans-serif",
+      "layout": "split",
+      "card_style": "glass",
+      "button_style": "gradient",
+      "decor_style": "orbs",
+      "hero_template": "1.08fr 0.92fr",
+      "seo_template": "1.18fr 0.82fr",
+      "feature_columns": 3,
+      "faq_columns": 3,
+      "hero_min_height": "78vh",
+      "panel_radius": "28px",
+      "card_radius": "26px",
+      "chip_radius": "999px",
+      "button_radius": "18px",
+      "outline_width": "1px",
+      "backdrop_blur": "22px",
+      "palette": {
+        "bg": "linear-gradient(150deg, #052e16 0%, #15803d 38%, #fde68a 100%)",
+        "surface": "rgba(5, 46, 22, 0.72)",
+        "surface_border": "rgba(253,224,71,0.18)",
+        "text": "#f0fdf4",
+        "muted": "#d1fae5",
+        "accent": "#fde047",
+        "accent_alt": "#86efac",
+        "hero_glow": "rgba(253, 224, 71, 0.18)",
+        "button_text": "#2a2104",
+        "panel_alt": "rgba(255,255,255,0.05)",
+        "shadow": "0 28px 92px rgba(3, 18, 9, 0.34)",
+        "input_fill": "rgba(255,255,255,0.05)"
+      }
+    },
+    "structure": {
+      "name": "Metric Grid",
+      "slug": "metric-grid",
+      "hero_variant": "command",
+      "proof_variant": "metrics",
+      "section_order": [
+        "features",
+        "seo",
+        "proof",
+        "faq"
+      ],
+      "feature_columns": 4,
+      "faq_columns": 2,
+      "family": "data-grid",
+      "moods": [
+        "technical",
+        "precise",
+        "systemic"
+      ],
+      "archetypes": [
+        "tool",
+        "calculator"
+      ],
+      "niches": [
+        "developer tools",
+        "qa",
+        "finance",
+        "analytics"
+      ],
+      "keywords": [
+        "metrics",
+        "grid",
+        "dashboard",
+        "precision"
+      ],
+      "token_index": [
+        "analytics",
+        "calculator",
+        "command",
+        "dashboard",
+        "data",
+        "developer",
+        "faq",
+        "features",
+        "finance",
+        "grid",
+        "metric",
+        "metrics",
+        "precise",
+        "precision",
+        "proof",
+        "seo",
+        "systemic",
+        "technical",
+        "tool",
+        "tools"
+      ]
+    },
+    "render_direction": "atlas-report",
+    "render_direction_name": "Atlas Report",
+    "page_blueprint": "worksheet-cascade",
+    "page_blueprint_name": "Worksheet Cascade",
+    "title": "Simulateur d'Écosystèmes Urbains Durables",
+    "tagline": "Imaginez votre quartier de demain",
+    "description": "Modélisez l",
+    "feature_prefix": "Bloc",
+    "action": "Utiliser l'outil",
+    "cta_primary": "Simuler l'impact",
+    "cta_secondary": "Consulter la FAQ",
+    "inputs": [
+      {
+        "id": "amount",
+        "label": "Montant de base",
+        "type": "number",
+        "placeholder": "7500",
+        "weight": 1.0
+      },
+      {
+        "id": "duration",
+        "label": "Durée estimée",
+        "type": "number",
+        "placeholder": "12",
+        "weight": 0.42
+      },
+      {
+        "id": "plan",
+        "label": "Niveau de service",
+        "type": "select",
+        "options": [
+          {
+            "label": "Essentiel",
+            "value": 1.0
+          },
+          {
+            "label": "Performance",
+            "value": 1.18
+          },
+          {
+            "label": "Premium",
+            "value": 1.34
+          }
+        ],
+        "weight": 1.0
+      }
+    ],
+    "hero_metrics": [
+      {
+        "value": "Atlas Report",
+        "label": "Cadence"
+      },
+      {
+        "value": "3",
+        "label": "Entrées"
+      },
+      {
+        "value": "Résultat recommandé",
+        "label": "Sortie"
+      }
+    ],
+    "trust_labels": [
+      "Atlas Report",
+      "Simuler l'impact",
+      "Résultat recommandé",
+      "Utilitaire immédiat",
+      "Structure SEO claire"
+    ],
+    "result_label": "Résultat recommandé",
+    "result_unit": "EUR",
+    "runtime_mode": "generic_calculator",
+    "page_variant": "console",
+    "faq_topic": "Simulateur d'Écosystèmes Urbains Durables",
+    "faq_entries": [
+      {
+        "question": "Pourquoi utiliser cet outil pour Simulateur d'Écosystèmes Urbains Durables ?",
+        "answer": "Il aide à cadrer le besoin rapidement et à orienter vers une prochaine action claire sur le marché France."
+      },
+      {
+        "question": "Le résultat est-il immédiat ?",
+        "answer": "Oui. L'interface est pensée pour une réponse rapide, lisible et exploitable dès la première interaction."
+      },
+      {
+        "question": "Cette page est-elle adaptée au SEO ?",
+        "answer": "Oui. La structure mélange utilité, clarté éditoriale et signaux de confiance sans surcharger l'expérience."
+      }
+    ],
+    "seo_paragraphs": [
+      "Cette page capte une intention forte autour de Simulateur d'Écosystèmes Urbains Durables et la transforme en action utile pour un public situé sur France.",
+      "Le format hero-first accélère la compréhension, réduit les frictions et améliore la lisibilité sur mobile comme sur desktop.",
+      "Le socle reste volontairement simple pour faciliter les tests, la QA continue et les variations SEO."
+    ],
+    "document_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Simulateur d&#x27;Écosystèmes Urbains Durables | Imaginez votre quartier de demain</title>\n    <meta name=\"description\" content=\"Modélisez l\">\n    <style>\n        :root {\n            --color-primary: #3a7d44;\n            --color-secondary: #a3cc9e;\n            --color-accent: #d3f3ee;\n            --color-background: #f0f8f0;\n            --color-text: #2c3e50;\n            --color-light-text: #4a6572;\n            --font-family-sans: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;\n            --glass-background: rgba(255, 255, 255, 0.6);\n            --glass-border: rgba(255, 255, 255, 0.3);\n            --glass-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n        }\n\n        body {\n            font-family: var(--font-family-sans);\n            line-height: 1.6;\n            color: var(--color-text);\n            background-color: var(--color-background);\n            margin: 0;\n            padding: 0;\n            display: flex;\n            flex-direction: column;\n            min-height: 100vh;\n        }\n\n        header {\n            background-color: var(--color-primary);\n            color: white;\n            padding: 2rem 1rem;\n            text-align: center;\n        }\n\n        h1 {\n            font-size: 2.8rem;\n            margin-bottom: 0.5rem;\n            font-weight: 600;\n        }\n\n        h2 {\n            font-size: 2.2rem;\n            color: var(--color-primary);\n            text-align: center;\n            margin-top: 3rem;\n            margin-bottom: 2rem;\n            font-weight: 500;\n        }\n\n        h3 {\n            font-size: 1.6rem;\n            color: var(--color-primary);\n            margin-top: 2rem;\n            margin-bottom: 1rem;\n            font-weight: 500;\n        }\n\n        .container {\n            max-width: 1000px;\n            margin: 0 auto;\n            padding: 2rem;\n            flex-grow: 1;\n        }\n\n        .intro, .tool-section, .benefits, .headlines-section, .seo-section {\n            background: var(--glass-background);\n            border-radius: 12px;\n            padding: 2.5rem;\n            margin-bottom: 2rem;\n            box-shadow: var(--glass-shadow);\n            backdrop-filter: blur(10px);\n            border: 1px solid var(--glass-border);\n        }\n\n        p {\n            margin-bottom: 1rem;\n            color: var(--color-light-text);\n        }\n\n        .intro p:first-of-type {\n            font-size: 1.15rem;\n            font-weight: 300;\n        }\n\n        .tool-section form {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\n            gap: 1.5rem;\n        }\n\n        .tool-section label {\n            display: block;\n            margin-bottom: 0.5rem;\n            font-weight: 500;\n            color: var(--color-text);\n            font-size: 0.95rem;\n        }\n\n        .tool-section input[type=\"number\"],\n        .tool-section select {\n            width: calc(100% - 20px);\n            padding: 12px;\n            border: 1px solid var(--color-secondary);\n            border-radius: 8px;\n            background-color: white;\n            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);\n            font-size: 1rem;\n            color: var(--color-text);\n            transition: all 0.2s ease-in-out;\n        }\n\n        .tool-section input[type=\"number\"]:focus,\n        .tool-section select:focus {\n            border-color: var(--color-primary);\n            box-shadow: 0 0 0 3px rgba(58, 125, 68, 0.2);\n            outline: none;\n        }\n\n        button {\n            background-color: var(--color-primary);\n            color: white;\n            padding: 14px 28px;\n            border: none;\n            border-radius: 8px;\n            cursor: pointer;\n            font-size: 1.1rem;\n            font-weight: 600;\n            transition: background-color 0.3s ease, transform 0.2s ease;\n            margin-top: 1.5rem;\n            display: block;\n            width: fit-content;\n            justify-self: start;\n            grid-column: 1 / -1;\n        }\n\n        button:hover {\n            background-color: #2e6236;\n            transform: translateY(-2px);\n        }\n\n        .tool-result {\n            margin-top: 2rem;\n            padding: 1.5rem;\n            background-color: var(--color-accent);\n            border-radius: 8px;\n            border: 1px solid rgba(58, 125, 68, 0.2);\n            color: var(--color-primary);\n            font-size: 1.1rem;\n            font-weight: 500;\n            line-height: 1.8;\n        }\n        .tool-result strong {\n            color: var(--color-text);\n        }\n\n        .benefits ul {\n            list-style: none;\n            padding: 0;\n        }\n\n        .benefits li {\n            background: linear-gradient(to right, var(--color-accent) 0%, rgba(255,255,255,0) 100%);\n            padding: 0.8rem 1.2rem;\n            margin-bottom: 0.8rem;\n            border-radius: 8px;\n            display: flex;\n            align-items: center;\n            color: var(--color-light-text);\n            box-shadow: 0 2px 4px rgba(0,0,0,0.05);\n        }\n\n        .benefits li::before {\n            content: '✓';\n            color: var(--color-primary);\n            font-weight: bold;\n            margin-right: 1rem;\n            font-size: 1.2rem;\n        }\n\n        .headlines-section {\n            background: var(--glass-background);\n        }\n        .headlines-section h3 {\n            border-bottom: 2px solid var(--color-secondary);\n            padding-bottom: 0.5rem;\n            margin-bottom: 1.5rem;\n            color: var(--color-primary);\n        }\n        .headlines-section ul {\n            list-style: none;\n            padding: 0;\n            margin-bottom: 2rem;\n        }\n        .headlines-section li {\n            background-color: var(--color-background);\n            border-left: 4px solid var(--color-primary);\n            padding: 0.8rem 1.2rem;\n            margin-bottom: 0.7rem;\n            border-radius: 4px;\n            color: var(--color-light-text);\n            font-style: italic;\n        }\n        .headlines-section li strong {\n            color: var(--color-text);\n            font-style: normal;\n        }\n\n        .seo-section {\n            text-align: center;\n            font-size: 0.9rem;\n            color: var(--color-light-text);\n            padding-top: 3rem;\n            padding-bottom: 3rem;\n        }\n\n        .seo-section p:last-of-type {\n            margin-bottom: 0;\n        }\n\n        footer {\n            background-color: var(--color-primary);\n            color: white;\n            text-align: center;\n            padding: 1.5rem 1rem;\n            margin-top: 4rem;\n        }\n\n        @media (max-width: 768px) {\n            h1 {\n                font-size: 2rem;\n            }\n            h2 {\n                font-size: 1.8rem;\n            }\n            h3 {\n                font-size: 1.4rem;\n            }\n            .container {\n                padding: 1rem;\n            }\n            .intro, .tool-section, .benefits, .headlines-section, .seo-section {\n                padding: 1.5rem;\n            }\n            button {\n                width: 100%;\n                margin-left: auto;\n                margin-right: auto;\n            }\n            .tool-section form {\n                grid-template-columns: 1fr;\n            }\n        }\n    </style>\n    <meta name=\"robots\" content=\"index, follow\">\n    <link rel=\"canonical\" href=\"https://simulateur-d-ecosystemes-urbains-durables-3.onrender.com\">\n    <meta property=\"og:title\" content=\"Simulateur d&#x27;Écosystèmes Urbains Durables\">\n    <meta property=\"og:description\" content=\"Modélisez l\">\n    <meta property=\"og:url\" content=\"https://simulateur-d-ecosystemes-urbains-durables-3.onrender.com\">\n    <meta property=\"og:type\" content=\"website\">\n    <script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Simulateur d'Écosystèmes Urbains Durables\", \"description\": \"Modélisez l\", \"url\": \"https://simulateur-d-ecosystemes-urbains-durables-3.onrender.com\", \"applicationCategory\": \"UtilityApplication\", \"operatingSystem\": \"Web Browser\"}</script>\n</head>\n<body data-site-slug=\"simulateur-d-ecosystemes-urbains-durables-3\" data-runtime-mode=\"generic_calculator\">\n    <header>\n        <div class=\"container\">\n            <h1>Simulateur d'Écosystèmes Urbains Durables</h1>\n            <p>Modélisez l'impact des initiatives écologiques sur la vitalité de nos quartiers.</p>\n        </div>\n    </header>\n\n    <div class=\"container\">\n        <section class=\"intro\">\n            <h2>Imaginez votre quartier de demain</h2>\n            <p>En tant qu'urbaniste, architecte, décideur local ou citoyen engagé, vous savez que chaque décision compte pour bâtir un environnement urbain plus résilient. Notre simulateur vous permet de visualiser concrètement les retombées positives de vos projets de développement durable.</p>\n            <p>Découvrez comment des choix simples peuvent transformer la qualité de vie, la biodiversité et l'empreinte écologique de nos espaces de vie.</p>\n        </section>\n\n        <section class=\"tool-section\">\n            <h2>Calculez l'impact de vos initiatives</h2>\n            <form id=\"tool-form\">\n                <div>\n                    <label for=\"surface_espaces_verts\">Surface d'espaces verts supplémentaires (m²):</label>\n                    <input type=\"number\" id=\"surface_espaces_verts\" value=\"5000\" min=\"0\" required>\n                </div>\n                <div>\n                    <label for=\"taux_permeabilisation\">Augmentation du taux de perméabilisation des sols (%):</label>\n                    <input type=\"number\" id=\"taux_permeabilisation\" value=\"10\" min=\"0\" max=\"100\" required>\n                </div>\n                <div>\n                    <label for=\"energie_renouvelable\">Part d'énergie renouvelable supplémentaire (pourcentage de la consommation locale):</label>\n                    <input type=\"number\" id=\"energie_renouvelable\" value=\"20\" min=\"0\" max=\"100\" required>\n                </div>\n                <div>\n                    <label for=\"nombre_arbres\">Nombre d'arbres plantés en plus:</label>\n                    <input type=\"number\" id=\"nombre_arbres\" value=\"200\" min=\"0\" required>\n                </div>\n                <div>\n                    <label for=\"distance_transport_doux\">Développement de pistes cyclables/voies piétonnes (km):</label>\n                    <input type=\"number\" id=\"distance_transport_doux\" value=\"5\" min=\"0\" required>\n                </div>\n                <div>\n                    <label for=\"gestion_eau_pluie\">Type de gestion des eaux de pluie:</label>\n                    <select id=\"gestion_eau_pluie\" required>\n                        <option value=\"aucune\">Aucune amélioration</option>\n                        <option value=\"legere\">Amélioration légère (bassins de rétention)</option>\n                        <option value=\"moderee\">Amélioration modérée (noues, jardins de pluie)</option>\n                        <option value=\"optimale\">Gestion optimale (infiltration totale, toitures végétalisées)</option>\n                    </select>\n                </div>\n                <button type=\"submit\" id=\"tool-submit\" data-affiliate-slot=\"calculate-impact\">Simuler l'impact</button>\n            </form>\n            <div id=\"tool-result\" class=\"tool-result\" style=\"display: none;\"></div>\n        </section>\n\n        <section class=\"benefits\">\n            <h2>Les bénéfices tangibles pour tous</h2>\n            <p>Chaque initiative en faveur de l'environnement génère une multitude d'avantages pour les habitants et le territoire. Voici quelques-uns des impacts positifs que notre simulateur modélise :</p>\n            <ul>\n                <li>Amélioration de la qualité de l'air et réduction des îlots de chaleur urbains.</li>\n                <li>Augmentation de la biodiversité locale et création d'écosystèmes résilients.</li>\n                <li>Réduction de la consommation d'énergie et diminution des émissions de gaz à effet de serre.</li>\n                <li>Meilleure gestion des eaux pluviales et prévention des inondations.</li>\n                <li>Renforcement du lien social et amélioration du bien-être des résidents.</li>\n                <li>Valorisation du patrimoine urbain et attractivité du quartier.</li>\n            </ul>\n        </section>\n\n        <section class=\"headlines-section\">\n            <h2>Idées de titres pour vos rapports</h2>\n            <p>Chaque projet mérite d'être mis en valeur. Voici quelques suggestions de titres, adaptés à différents contextes, pour présenter les conclusions de vos simulations et inspirer l'action :</p>\n\n            <h3>Titre axé SEO</h3>\n            <ul>\n                <li><strong>Impact Écologique Quartier :</strong> Calculateur Biodiversité & Climat Urbain</li>\n                <li><strong>Urbanisme Durable :</strong> Modélisation Bénéfices Environnementaux France</li>\n                <li><strong>Simulation Aménagement Vert :</strong> Qualité de Vie & Énergie Renouvelable</li>\n            </ul>\n\n            <h3>Titre accrocheur (Clickbait)</h3>\n            <ul>\n                <li><strong>Révolution Urbaine :</strong> Comment CE quartier va changer (et le vôtre aussi) !</li>\n                <li><strong>Secret Révélé :</strong> Les chiffres qui prouvent que votre ville peut respirer !</li>\n                <li><strong>Découvrez :</strong> La formule magique pour un quartier 100% vert !</li>\n            </ul>\n\n            <h3>Titre expert</h3>\n            <ul>\n                <li><strong>Prospective Écosystémique Urbaine :</strong> Méthodologie d'évaluation des externalités positives des aménagements verts.</li>\n                <li><strong>Analyse Multi-Critères :</strong> Quantification des services écosystémiques rendus par les infrastructures vertes en milieu dense.</li>\n                <li><strong>Optimisation Territoriale :</strong> Modélisation de l'efficience énergétique et hydrologique des solutions basées sur la nature.</li>\n            </ul>\n\n            <h3>Titre doux et inspirant</h3>\n            <ul>\n                <li><strong>Un Souffle Nouveau pour nos Villes :</strong> Cultiver la vie en milieu urbain.</li>\n                <li><strong>Construire Demain, Ensemble :</strong> L'harmonie entre l'humain et la nature.</li>\n                <li><strong>Éveiller les Quartiers :</strong> Vers un avenir où il fait bon vivre.</li>\n            </ul>\n\n            <h3>Titre commercial</h3>\n            <ul>\n                <li><strong>Solution d'Aide à la Décision :</strong> Maximisez le retour sur investissement environnemental.</li>\n                <li><strong>Performance Urbaine Éco-responsable :</strong> Votre outil pour une planification innovante.</li>\n                <li><strong>Valorisez vos Projets :</strong> Preuves quantifiables de l'engagement durable de votre collectivité.</li>\n            </ul>\n        </section>\n    </div>\n\n    <section class=\"seo-section\">\n        <p>Recherchez-vous des solutions pour l'<strong>urbanisme durable</strong> en France ? Notre simulateur est l'outil idéal pour les professionnels et les collectivités souhaitant évaluer l'<strong>impact écologique des projets urbains</strong>. Que ce soit pour la <strong>qualité de l'air en ville</strong>, la <strong>biodiversité urbaine</strong>, la <strong>gestion de l'eau</strong> ou l'<strong>énergie renouvelable en quartier</strong>, notre plateforme offre une <strong>modélisation environnementale</strong> précise. Optimisez vos plans d'<strong>aménagement vert</strong> et visualisez les <strong>bénéfices environnementaux</strong> pour un <strong>quartier écologique</strong> et résilient. Idéal pour architectes, paysagistes et municipalités engagées dans la <strong>transition écologique urbaine</strong>.</p>\n        <p>Découvrez comment <strong>verdir votre ville</strong> et améliorer le <strong>bien-être des citoyens</strong> grâce à des initiatives concrètes. Utilisez notre <strong>calculateur d'impact environnemental</strong> pour des décisions éclairées en matière de <strong>développement urbain durable</strong> et de <strong>résilience climatique</strong>.</p>\n    </section>\n\n    <footer>\n        <div class=\"container\">\n            <p>&copy; 2023 Simulateur d'Écosystèmes Urbains Durables. Tous droits réservés.</p>\n        </div>\n    </footer>\n\n    <script>\n        document.getElementById('tool-form').addEventListener('submit', function(e) {\n            e.preventDefault();\n\n            const surfaceEspacesVerts = parseFloat(document.getElementById('surface_espaces_verts').value);\n            const tauxPermeabilisation = parseFloat(document.getElementById('taux_permeabilisation').value);\n            const energieRenouvelable = parseFloat(document.getElementById('energie_renouvelable').value);\n            const nombreArbres = parseFloat(document.getElementById('nombre_arbres').value);\n            const distanceTransportDoux = parseFloat(document.getElementById('distance_transport_doux').value);\n            const gestionEauPluie = document.getElementById('gestion_eau_pluie').value;\n\n            // Base values for a \"fictional average quartier\" for calculation context\n            const baseAirQualityImprovementPerSqM = 0.005; // microgram/m3 PM2.5 per m2 green space\n            const baseBiodiversityIncreasePerTree = 0.1; // species index points per tree\n            const baseCarbonReductionPerRenewablePercent = 0.5; // tons CO2 per % renewable\n            const baseWaterRetentionPerPermeablePercent = 100; // liters per % permeabilization per 1000m2\n            const baseSocialWellbeingPerKmSoftTransport = 0.02; // arbitrary index point\n\n            let airQualityImpact = surfaceEspacesVerts * baseAirQualityImprovementPerSqM;\n            let biodiversityImpact = nombreArbres * baseBiodiversityIncreasePerTree;\n            let carbonImpact = energieRenouvelable * baseCarbonReductionPerRenewablePercent;\n            let waterRetentionImpact = (tauxPermeabilisation / 100) * baseWaterRetentionPerPermeablePercent * (surfaceEspacesVerts / 1000);\n            let socialWellbeingImpact = distanceTransportDoux * baseSocialWellbeingPerKmSoftTransport;\n\n            switch (gestionEauPluie) {\n                case 'legere':\n                    waterRetentionImpact *= 1.2;\n                    break;\n                case 'moderee':\n                    waterRetentionImpact *= 1.8;\n                    break;\n                case 'optimale':\n                    waterRetentionImpact *= 2.5;\n                    break;\n            }\n\n            const resultDiv = document.getElementById('tool-result');\n            resultDiv.innerHTML = `\n                <h3>Résultats de la Simulation :</h3>\n                <p><strong>Qualité de l'air :</strong> Amélioration estimée de <strong>${airQualityImpact.toFixed(2)} µg/m³</strong> de particules fines (PM2.5) dans l'air.</p>\n                <p><strong>Biodiversité :</strong> Augmentation d'environ <strong>${biodiversityImpact.toFixed(1)}</strong> points sur l'indice de biodiversité locale (équivalent à de nouvelles espèces ou un enrichissement des existantes).</p>\n                <p><strong>Émissions de CO2 :</strong> Réduction annuelle estimée de <strong>${carbonImpact.toFixed(0)} tonnes de CO2</strong> grâce aux énergies renouvelables.</p>\n                <p><strong>Gestion de l'eau :</strong> Capacité de rétention des eaux pluviales augmentée d'environ <strong>${waterRetentionImpact.toFixed(0)} litres</strong> par événement pluvieux important.</p>\n                <p><strong>Bien-être social :</strong> Indice de bien-être et de mobilité douce amélioré de <strong>${socialWellbeingImpact.toFixed(2)}</strong> points.</p>\n                <p>Ces chiffres sont des estimations basées sur des modèles simplifiés et ont une valeur indicative.</p>\n            `;\n            resultDiv.style.display = 'block';\n        });\n    </script>\n<div id=\"qa-smoke-result\" hidden></div>\n<script id=\"farmbuilder-affiliate-helper\">\n(function () {\n  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};\n  document.addEventListener(\"click\", function (event) {\n    const target = event.target.closest(\"[data-affiliate-slot]\");\n    if (!target) return;\n    const slot = target.getAttribute(\"data-affiliate-slot\");\n    const href = window.__UTILITY_AFFILIATE_MAP[slot];\n    if (!href) return;\n    if (target.tagName && target.tagName.toLowerCase() === \"a\") {\n      target.setAttribute(\"href\", href);\n      target.removeAttribute(\"rel\");\n      return;\n    }\n    event.preventDefault();\n    window.open(href, \"_blank\");\n  }, true);\n})();\n</script>\n<script id=\"farmbuilder-functional-qa\">\n(function () {\n  function marker() {\n    let node = document.getElementById(\"qa-smoke-result\");\n    if (node) return node;\n    node = document.createElement(\"div\");\n    node.id = \"qa-smoke-result\";\n    node.hidden = true;\n    document.body.appendChild(node);\n    return node;\n  }\n\n  let qaFinished = false;\n  let qaWatchdog = null;\n\n  function normalize(text) {\n    return String(text || \"\").replace(/\\s+/g, \" \").trim();\n  }\n\n  function findForm() {\n    return document.getElementById(\"tool-form\") || document.querySelector(\"form\");\n  }\n\n  function findResult() {\n    return (\n      document.getElementById(\"tool-result\") ||\n      document.querySelector(\"[data-result]\") ||\n      document.querySelector(\".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis\")\n    );\n  }\n\n  function primaryAction(form) {\n    if (!form) return null;\n    return (\n      document.getElementById(\"tool-submit\") ||\n      form.querySelector(\"#tool-submit\") ||\n      form.querySelector(\"[data-primary-action]\") ||\n      form.querySelector(\"button[type=submit]\") ||\n      form.querySelector(\"button\") ||\n      form.querySelector(\"input[type=submit]\")\n    );\n  }\n\n  function resultSignature(node) {\n    if (!node) return \"\";\n    const text = normalize(node.textContent);\n    const html = normalize(node.innerHTML).slice(0, 600);\n    return `${text}||${html}`;\n  }\n\n  function resultHeadline(node) {\n    if (!node) return \"\";\n    const heading = node.querySelector(\"h1, h2, h3, strong, b\");\n    return normalize(heading ? heading.textContent : \"\");\n  }\n\n  function sampleText(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"} ${field.placeholder || \"\"}`.toLowerCase();\n    if (/email/.test(key)) return \"bonjour@example.com\";\n    if (/url|site|website|lien/.test(key)) return \"https://example.com/offre-solaire\";\n    if (/phone|tel|mobile/.test(key)) return \"0612345678\";\n    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return \"Paris\";\n    if (/orientation/.test(key)) return \"sud\";\n    if (/keyword|theme|topic|sujet|subject/.test(key)) return \"energie solaire domestique\";\n    if (/titre|title/.test(key)) return \"Simulateur solaire maison\";\n    if (/nom|name|project/.test(key)) return \"Projet Horizon\";\n    if (/description|notes|content|message/.test(key)) return \"Maison individuelle exposee sud avec toiture exploitable.\";\n    return field.placeholder || \"France\";\n  }\n\n  function sampleNumber(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"}`.toLowerCase();\n    if (/inclinaison|angle|slope/.test(key)) return \"30\";\n    if (/surface|size|m2|sqm/.test(key)) return \"28\";\n    if (/annee|year/.test(key)) return \"2024\";\n    if (/prix|price|budget|cost|amount|montant/.test(key)) return \"12000\";\n    const min = Number(field.min || \"\");\n    const max = Number(field.max || \"\");\n    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {\n      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));\n    }\n    if (Number.isFinite(min)) return String(Math.max(min, 12));\n    if (Number.isFinite(max)) return String(Math.min(max, 12));\n    return field.value || \"12\";\n  }\n\n  function applySample(field) {\n    const tag = (field.tagName || \"\").toLowerCase();\n    const type = (field.type || \"\").toLowerCase();\n    if (field.disabled) return;\n    if (type === \"hidden\" || type === \"submit\" || type === \"button\" || type === \"reset\" || type === \"image\" || type === \"file\") {\n      return;\n    }\n    const currentValue = normalize(field.value);\n    if (tag === \"select\") {\n      if (currentValue) return;\n      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];\n      if (option) field.value = option.value;\n      return;\n    }\n    if (type === \"checkbox\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"radio\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"date\") {\n      if (currentValue) return;\n      field.value = \"2026-03-01\";\n      return;\n    }\n    if (type === \"email\") {\n      if (currentValue) return;\n      field.value = \"bonjour@example.com\";\n      return;\n    }\n    if (type === \"url\") {\n      if (currentValue) return;\n      field.value = \"https://example.com/offre-solaire\";\n      return;\n    }\n    if (type === \"tel\") {\n      if (currentValue) return;\n      field.value = \"0612345678\";\n      return;\n    }\n    if (type === \"color\") {\n      if (currentValue) return;\n      field.value = \"#2f855a\";\n      return;\n    }\n    if (type === \"number\" || type === \"range\") {\n      if (currentValue) return;\n      field.value = sampleNumber(field);\n      return;\n    }\n    if (currentValue) return;\n    field.value = sampleText(field);\n  }\n\n  function stamp(status, detail, headline, primary) {\n    if (qaFinished) return;\n    qaFinished = true;\n    if (qaWatchdog) {\n      window.clearTimeout(qaWatchdog);\n      qaWatchdog = null;\n    }\n    const node = marker();\n    node.dataset.status = status;\n    node.dataset.mode = \"native-form\";\n    node.dataset.detail = detail || \"\";\n    node.dataset.headline = headline || \"\";\n    node.dataset.primary = primary || \"\";\n    node.dataset.viewport = window.innerWidth <= 640 ? \"mobile\" : \"desktop\";\n    window.setTimeout(function () {\n      try {\n        window.stop();\n      } catch (_error) {}\n    }, 0);\n  }\n\n  function installModalGuards() {\n    const noop = function () {};\n    const approve = function () { return true; };\n    const empty = function () { return \"\"; };\n    try { window.alert = noop; } catch (_error) {}\n    try { window.confirm = approve; } catch (_error) {}\n    try { window.prompt = empty; } catch (_error) {}\n  }\n\n  function triggerAction(form, action) {\n    try {\n      if (typeof form.requestSubmit === \"function\") {\n        form.requestSubmit(action || undefined);\n        return;\n      }\n    } catch (_error) {}\n    if (action && typeof action.click === \"function\") {\n      action.click();\n      return;\n    }\n    form.dispatchEvent(new Event(\"submit\", { bubbles: true, cancelable: true }));\n  }\n\n  function inspectResult(before, attemptsLeft) {\n    const result = findResult();\n    if (!result) {\n      stamp(\"fail\", \"La zone de resultat est introuvable.\", \"\");\n      return;\n    }\n    const after = resultSignature(result);\n    const text = normalize(result.textContent);\n    if (after && after !== before && text.length >= 24) {\n      const primary = result.querySelector(\"a[href], button[data-href], [data-primary-url]\") || document.querySelector(\"#tool-result a[href]\");\n      stamp(\"pass\", \"Le formulaire natif a mis a jour la zone de resultat.\", resultHeadline(result), primary ? (primary.getAttribute(\"href\") || primary.getAttribute(\"data-primary-url\") || \"\") : \"\");\n      return;\n    }\n    if (attemptsLeft > 0) {\n      window.setTimeout(function () {\n        inspectResult(before, attemptsLeft - 1);\n      }, 250);\n      return;\n    }\n    stamp(\"fail\", \"La zone de resultat n'a pas renvoye de contenu exploitable.\", resultHeadline(result));\n  }\n\n  function runSmoke() {\n    const params = new URLSearchParams(window.location.search);\n    if (params.get(\"__qa\") !== \"functional\") return;\n    qaWatchdog = window.setTimeout(function () {\n      stamp(\"fail\", \"QA smoke timed out before the page reported a usable result.\", \"\");\n    }, 7000);\n    const form = findForm();\n    if (!form) {\n      stamp(\"fail\", \"Le formulaire principal est introuvable.\", \"\");\n      return;\n    }\n    const result = findResult();\n    const before = resultSignature(result);\n    installModalGuards();\n    try {\n      form.querySelectorAll(\"input, select, textarea\").forEach(applySample);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke sample failed: ${error.message}` : \"QA smoke sample failed before submit.\", \"\");\n      return;\n    }\n    const action = primaryAction(form);\n    try {\n      triggerAction(form, action);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke submit failed: ${error.message}` : \"QA smoke submit failed.\", \"\");\n      return;\n    }\n    inspectResult(before, 10);\n  }\n\n  window.addEventListener(\"error\", function (event) {\n    const message = event && event.message ? event.message : \"JavaScript runtime error during QA smoke.\";\n    stamp(\"fail\", `QA smoke JS error: ${message}`, \"\");\n  }, { once: true });\n\n  window.addEventListener(\"unhandledrejection\", function (event) {\n    const reason = event && event.reason;\n    const detail = typeof reason === \"string\"\n      ? reason\n      : reason && reason.message\n        ? reason.message\n        : \"Unhandled promise rejection during QA smoke.\";\n    stamp(\"fail\", `QA smoke rejection: ${detail}`, \"\");\n  }, { once: true });\n\n  if (document.readyState === \"loading\") {\n    document.addEventListener(\"DOMContentLoaded\", function () {\n      window.setTimeout(runSmoke, 60);\n    }, { once: true });\n  } else {\n    window.setTimeout(runSmoke, 60);\n  }\n})();\n</script>\n</body>\n</html>",
+    "generation_mode": "direct_html"
+  }
+}
