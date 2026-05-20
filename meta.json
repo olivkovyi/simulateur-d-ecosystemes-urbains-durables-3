@@ -1,27 +1,38 @@
 {
+  "slug": "simulateur-d-ecosystemes-urbains-durables-3",
   "name": "Simulateur d'Écosystèmes Urbains Durables",
   "description": "Modélisez l",
   "theme": "calculator",
-  "design_theme": "solarpunk-signal",
-  "structure_preset": "metric-grid",
-  "render_direction": "atlas-report",
-  "page_blueprint": "worksheet-cascade",
+  "design_theme": "imported-source",
+  "structure_preset": "external-source",
+  "render_direction": "imported-source",
+  "page_blueprint": "imported-source",
   "language": "fr",
   "country": "FR",
   "url": null,
   "expected_url": "https://simulateur-d-ecosystemes-urbains-durables-3.onrender.com",
-  "created": "2026-05-18T00:01:34.916609+00:00",
+  "created": "2026-05-20T22:09:22.054805+00:00",
   "owner_user_id": "user-1774822953462",
   "owner_username": "admin",
   "owner_display_name": "Administrator",
   "status": "generated",
-  "run_id": "run-1779062335699",
-  "external_site_request_id": null,
-  "external_client_ref": null,
-  "external_source_label": null,
-  "source_type": "generated",
+  "run_id": "run-1779314750566",
   "publish_target": "render",
   "mode": "production",
+  "source_type": "imported",
+  "import_source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1779314606639/simulateur-d-ecosystemes-urbains-durables-3",
+  "import_root_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1779314606639/simulateur-d-ecosystemes-urbains-durables-3",
+  "import_resolution_note": null,
+  "analysis": {
+    "model": "preserved-analysis",
+    "summary": "Modélisez l",
+    "notes": "Growth module republish of an updated local artifact.",
+    "characteristics": [
+      "imported static site",
+      "ready file deploy",
+      "calculator"
+    ]
+  },
   "github": {
     "status": "pending"
   },
@@ -32,13 +43,215 @@
     "status": "pending"
   },
   "features": [
-    "Hero pattern: command",
-    "Proof module: metrics",
-    "Design theme: Solarpunk Signal",
-    "Render direction: Atlas Report",
-    "Page blueprint: Worksheet Cascade",
-    "Runtime mode: generic_calculator",
-    "Generation mode: direct_html",
-    "Artifact rendered, awaiting QA and deployment"
-  ]
+    "Imported from ready static files",
+    "AI analysis model: preserved-analysis",
+    "imported static site",
+    "ready file deploy",
+    "calculator"
+  ],
+  "growth": {
+    "affiliate": {
+      "status": "ready",
+      "updated_at": "2026-05-20T22:05:27.554195+00:00",
+      "modes": [
+        "anchor_text"
+      ],
+      "links": 1,
+      "insertions": 1,
+      "review": {
+        "status": "pass",
+        "score": 82,
+        "summary": "The page presents a coherent urban sustainability simulator with clear value proposition and functional UX. Content is well-structured, educational, and appropriately targets urbanists, architects, and citizens. No significant spam, keyword stuffing, or manipulative affiliate tactics detected in the excerpt provided.",
+        "issues": [
+          "Affiliate mode declared but no visible affiliate links/CTAs in excerpt—verify affiliate monetization isn't hidden or deceptively placed elsewhere on full page",
+          "Minor: 'Imaginez votre quartier de demain' repeated twice in opening (title + first line)—slight redundancy but not critical",
+          "Ensure form inputs and 'Simuler l'impact' button function properly to avoid broken UX",
+          "Monitor for potential geo-stuffing if full page contains excessive location-based keywords beyond what's shown here"
+        ]
+      }
+    }
+  },
+  "previous_live_state": {
+    "url": "https://simulateur-d-ecosystemes-urbains.onrender.com",
+    "expected_url": "https://simulateur-d-ecosystemes-urbains.onrender.com",
+    "requested_url": "https://simulateur-d-ecosystemes-urbains.onrender.com",
+    "github": {
+      "status": "published",
+      "repo_name": "simulateur-d-ecosystemes-urbains-durables-3",
+      "repo_url": "https://github.com/olivkovyi/simulateur-d-ecosystemes-urbains-durables-3",
+      "updated_at": 1779062537
+    },
+    "deployment": {
+      "status": "ready",
+      "provider": "render",
+      "service_id": "srv-d855eurtqb8s73fof8o0",
+      "project_name": "simulateur-d-ecosystemes-urbains-durables-3",
+      "requested_project_name": null,
+      "deployment_id": "dep-d855ev3tqb8s73fof900",
+      "deployment_url": "https://simulateur-d-ecosystemes-urbains.onrender.com",
+      "public_url": "https://simulateur-d-ecosystemes-urbains.onrender.com",
+      "expected_public_url": "https://simulateur-d-ecosystemes-urbains.onrender.com",
+      "dashboard_url": "https://dashboard.render.com/static/srv-d855eurtqb8s73fof8o0",
+      "ready_state": "live",
+      "target": "production",
+      "updated_at": 1779062550,
+      "requested_public_url": "https://simulateur-d-ecosystemes-urbains.onrender.com",
+      "url_source": "alias"
+    },
+    "qa": {
+      "status": "pass",
+      "local": {
+        "status": "pass",
+        "checks": [
+          {
+            "name": "index_exists",
+            "status": "pass",
+            "detail": "index.html exists"
+          },
+          {
+            "name": "meta_exists",
+            "status": "pass",
+            "detail": "meta.json exists"
+          },
+          {
+            "name": "robots_exists",
+            "status": "pass",
+            "detail": "robots.txt exists"
+          },
+          {
+            "name": "has_title",
+            "status": "pass",
+            "detail": "HTML contains a title tag"
+          },
+          {
+            "name": "has_viewport",
+            "status": "pass",
+            "detail": "HTML contains a mobile viewport meta tag"
+          },
+          {
+            "name": "has_canonical",
+            "status": "pass",
+            "detail": "HTML contains a canonical URL"
+          },
+          {
+            "name": "bundle_size",
+            "status": "pass",
+            "detail": "Generated HTML stays below 250KB"
+          },
+          {
+            "name": "functional_qa_hook",
+            "status": "pass",
+            "detail": "Generated HTML includes the browser QA hook used before deploy."
+          },
+          {
+            "name": "inline_script_syntax",
+            "status": "pass",
+            "detail": "Inline JavaScript syntax check passed."
+          },
+          {
+            "name": "robots_google_only",
+            "status": "pass",
+            "detail": "robots.txt allows only Google crawlers and blocks all other bots."
+          },
+          {
+            "name": "no_meta_noindex",
+            "status": "pass",
+            "detail": "Generated HTML does not inject a noindex robots meta tag."
+          },
+          {
+            "name": "no_internal_branding",
+            "status": "pass",
+            "detail": "Generated site does not leak internal platform branding or internal product naming."
+          },
+          {
+            "name": "desktop_layout_overlap",
+            "status": "pass",
+            "detail": "Editorial desktop layout avoids negative overlap offsets on the tool panel"
+          }
+        ],
+        "checked_at": 1779314728
+      },
+      "functional": {
+        "status": "pass",
+        "detail": "desktop: Le formulaire natif a mis a jour la zone de resultat. | mobile: Le formulaire natif a mis a jour la zone de resultat.",
+        "target_url": "http://127.0.0.1:41989/index.html?__qa=functional",
+        "mode": "native-form",
+        "headline": "Résultats de la Simulation :",
+        "primary_url": "",
+        "desktop": {
+          "status": "pass",
+          "detail": "Le formulaire natif a mis a jour la zone de resultat.",
+          "target_url": "http://127.0.0.1:41989/index.html?__qa=functional",
+          "viewport": "desktop",
+          "mode": "native-form",
+          "headline": "Résultats de la Simulation :",
+          "primary_url": "",
+          "reported_viewport": "desktop",
+          "updated_at": 1779314728
+        },
+        "mobile": {
+          "status": "pass",
+          "detail": "Le formulaire natif a mis a jour la zone de resultat.",
+          "target_url": "http://127.0.0.1:41989/index.html?__qa=functional",
+          "viewport": "mobile",
+          "mode": "native-form",
+          "headline": "Résultats de la Simulation :",
+          "primary_url": "",
+          "reported_viewport": "mobile",
+          "updated_at": 1779314729
+        },
+        "updated_at": 1779314730
+      },
+      "remote": {
+        "status": "pass",
+        "checks": [
+          {
+            "name": "remote_200",
+            "status": "pass",
+            "detail": "Remote deployment returned HTTP 200"
+          },
+          {
+            "name": "remote_title",
+            "status": "pass",
+            "detail": "Remote HTML contains a title tag"
+          },
+          {
+            "name": "remote_body",
+            "status": "pass",
+            "detail": "Remote HTML contains a body tag"
+          }
+        ],
+        "checked_at": 1779314730
+      },
+      "visual": {
+        "status": "pass",
+        "desktop": {
+          "status": "pass",
+          "path": "/var/lib/utility-site-studio/static/generated-qa/simulateur-d-ecosystemes-urbains-durables-3/simulateur-d-ecosystemes-urbains-durables-3-desktop.png",
+          "detail": "1440x960 screenshot captured.",
+          "relative_url": "/static/generated-qa/simulateur-d-ecosystemes-urbains-durables-3/simulateur-d-ecosystemes-urbains-durables-3-desktop.png"
+        },
+        "mobile": {
+          "status": "pass",
+          "path": "/var/lib/utility-site-studio/static/generated-qa/simulateur-d-ecosystemes-urbains-durables-3/simulateur-d-ecosystemes-urbains-durables-3-mobile.png",
+          "detail": "430x932 screenshot captured.",
+          "relative_url": "/static/generated-qa/simulateur-d-ecosystemes-urbains-durables-3/simulateur-d-ecosystemes-urbains-durables-3-mobile.png"
+        },
+        "updated_at": 1779314734
+      },
+      "lighthouse": {
+        "status": "pass",
+        "scores": {
+          "performance": 100,
+          "accessibility": 93,
+          "best-practices": 96,
+          "seo": 100
+        },
+        "report_path": "/var/lib/utility-site-studio/data/qa/lighthouse/simulateur-d-ecosystemes-urbains-durables-3-lighthouse.json",
+        "updated_at": 1779314749
+      },
+      "qa_live_url": "https://simulateur-d-ecosystemes-urbains.onrender.com",
+      "updated_at": "2026-05-20T22:05:49.158600+00:00"
+    }
+  }
 }
